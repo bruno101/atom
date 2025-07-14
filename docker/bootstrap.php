@@ -107,15 +107,15 @@ all:
   csp:
     response_header: Content-Security-Policy
     directives: >
-      default-src 'self';
+      default-src *;
       font-src 'self' https://fonts.gstatic.com;
       form-action 'self';
       img-src 'self' https://*.googleapis.com https://*.gstatic.com *.google.com  *.googleusercontent.com data: https://www.gravatar.com/avatar/ https://*.google-analytics.com https://*.googletagmanager.com blob:;
       script-src 'self' https://*.googletagmanager.com 'nonce' https://*.googleapis.com https://*.gstatic.com *.google.com https://*.ggpht.com *.googleusercontent.com blob:;
-      style-src 'self' 'nonce' https://fonts.googleapis.com;
+      style-src 'unsafe-inline' https://fonts.googleapis.com;
       worker-src 'self' blob:;
-      connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.googleapis.com *.google.com https://*.gstatic.com  data: blob:;
-      frame-ancestors 'self';
+      connect-src  'self' http://localhost:7860 https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.googleapis.com *.google.com https://*.gstatic.com  data: blob:;
+      frame-ancestors *;
   user_challenge:
     activated: false
     test_headless: true

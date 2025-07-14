@@ -20,7 +20,7 @@
 
   <?php if (isset($link) && QubitAcl::check($resource->object, 'readMaster')) { ?>
     <a href="<?php echo $link; ?>" class="btn btn-sm atom-btn-white mt-3">
-      <i class="fas fa-download me-1" aria-hidden="true"></i>
+      <i class="fas fa-download icon-dynamic me-1" aria-hidden="true"></i>
       <?php echo __('Download audio'); ?>
     </a>
   <?php } ?>

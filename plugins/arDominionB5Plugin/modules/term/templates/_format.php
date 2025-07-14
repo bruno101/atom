@@ -5,7 +5,7 @@
     <ul class="list-unstyled">
       <li>
         <a class="atom-icon-link" href="<?php echo url_for([$resource, 'module' => 'sfSkosPlugin', 'action' => 'import']); ?>">
-          <i class="fa fa-fw fa-download me-1" aria-hidden="true">
+          <i class="fa fa-fw ficon-dynamic a-download me-1" aria-hidden="true">
           </i><?php echo __('SKOS'); ?>
         </a>
       </li>

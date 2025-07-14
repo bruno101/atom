@@ -19,7 +19,7 @@ class QubitCspFilterTest extends TestCase
 all:
   csp:
     response_header: Content-Security-Policy-Report-Only
-    directives: default-src 'self'; font-src 'self'; img-src 'self' blob:; script-src 'self' 'nonce'; style-src 'self' 'nonce'; worker-src 'self' blob:; frame-ancestors 'self';
+    directives: default-src *; connect-src  http://localhost:7860; font-src 'self'; img-src 'self' blob:; script-src 'self' 'nonce'; style-src 'self' 'unsafe-inline'; worker-src 'self' blob:; frame-ancestors *;
 EOT;
 
         $app_yml_multiline_greaterthan = <<<'EOT'
@@ -27,13 +27,14 @@ all:
   csp:
     response_header: Content-Security-Policy-Report-Only
     directives: >
-      default-src 'self';
+      default-src *;
+      connect-src  http://localhost:7860;
       font-src 'self';
       img-src 'self' blob:;
       script-src 'self' 'nonce';
-      style-src 'self' 'nonce';
+      style-src 'self' 'unsafe-inline';
       worker-src 'self' blob:;
-      frame-ancestors 'self';
+      frame-ancestors *;
 EOT;
 
         $app_yml_multiline_pipe = <<<'EOT'
@@ -41,11 +42,12 @@ all:
   csp:
     response_header: Content-Security-Policy-Report-Only
     directives: |
-      default-src 'self';
+      default-src *;
+      connect-src  http://localhost:7860;
       font-src 'self';
       img-src 'self' blob:;
       script-src 'self' 'nonce';
-      style-src 'self' 'nonce';
+      style-src 'self' 'unsafe-inline';
       worker-src 'self' blob:;
       frame-ancestors 'self';
 EOT;
@@ -118,15 +120,15 @@ EOT;
         return [
             'Standard app.yml with single line directive' => [
                 'filename' => '/app.yml',
-                'expected' => "default-src 'self'; font-src 'self'; img-src 'self' blob:; script-src 'self' 'nonce'; style-src 'self' 'nonce'; worker-src 'self' blob:; frame-ancestors 'self';",
+                'expected' => "default-src *; connect-src  http://localhost:7860; font-src 'self'; img-src 'self' blob:; script-src 'self' 'nonce'; style-src 'unsafe-inline' 'nonce'; worker-src 'self' blob:; frame-ancestors *;",
             ],
             'app.yml with multiline directive - greaterthan yml string concatenator' => [
                 'filename' => '/app_yml_multiline_greaterthan',
-                'expected' => "default-src 'self'; font-src 'self'; img-src 'self' blob:; script-src 'self' 'nonce'; style-src 'self' 'nonce'; worker-src 'self' blob:; frame-ancestors 'self';",
+                'expected' => "default-src *; connect-src  http://localhost:7860; font-src 'self'; img-src 'self' blob:; script-src 'self' 'nonce'; style-src 'unsafe-inline' 'nonce'; worker-src 'self' blob:; frame-ancestors *;",
             ],
             'app.yml with multiline directive - pipe yml string concatenator' => [
                 'filename' => '/app_yml_multiline_pipe',
-                'expected' => "default-src 'self'; font-src 'self'; img-src 'self' blob:; script-src 'self' 'nonce'; style-src 'self' 'nonce'; worker-src 'self' blob:; frame-ancestors 'self';",
+                'expected' => "default-src *; connect-src  http://localhost:7860; font-src 'self'; img-src 'self' blob:; script-src 'self' 'nonce'; style-src 'unsafe-inline' 'nonce'; worker-src 'self' blob:; frame-ancestors *;",
             ],
         ];
     }

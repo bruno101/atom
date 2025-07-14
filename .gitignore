@@ -45,3 +45,5 @@ cypress/downloads
 cypress/screenshots
 cypress/videos
 cypress.env.json
+
+/importacao/*

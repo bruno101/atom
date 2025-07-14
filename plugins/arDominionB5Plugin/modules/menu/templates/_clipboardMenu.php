@@ -15,14 +15,14 @@
         'Note: clipboard items unclipped in this page will be removed from the clipboard when the page is refreshed. You can re-select them now, or reload the page to remove them completely. Using the sort or print preview buttons will also cause a page reload - so anything currently deselected will be lost!'
     ); ?>">
     <i
-      class="fas fa-2x fa-fw fa-paperclip px-0 px-lg-2 py-2"
+      class="fas fa-2x fa-fw fa-paperclip px-0 px-xl-2 py-2 icon-dynamic"
       data-bs-toggle="tooltip"
       data-bs-placement="bottom"
-      data-bs-custom-class="d-none d-lg-block"
+      data-bs-custom-class="d-none d-xl-block"
       title="<?php echo $menu->getLabel(['cultureFallback' => true]); ?>"
       aria-hidden="true">
     </i>
-    <span class="d-lg-none mx-1" aria-hidden="true">
+    <span class="icon-dynamic d-xl-none mx-1" aria-hidden="true">
       <?php echo $menu->getLabel(['cultureFallback' => true]); ?>
     </span>
     <span class="visually-hidden">

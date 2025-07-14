@@ -25,7 +25,7 @@
         <tr>
           <td colspan="2" class="text-center">
             <a href="<?php echo public_path($resource->getFullPath()); ?>" class="btn btn-sm atom-btn-white">
-              <i class="fas fa-download me-1" aria-hidden="true"></i>
+              <i class="fas fa-download icon-dynamic me-1" aria-hidden="true"></i>
               <?php echo __('Download %1%', ['%1%' => $resource]); ?>
             </a>
           </td>

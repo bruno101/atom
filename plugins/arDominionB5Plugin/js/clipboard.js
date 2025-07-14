@@ -427,7 +427,7 @@ import Tooltip from "bootstrap/js/dist/tooltip";
       if (!$buttonSpan.length && totalCount > 0) {
         this.$element.append(
           '<span class="clipboard-count position-absolute top-0 start-0' +
-            ' badge rounded-pill bg-primary">' +
+            ' badge rounded-pill clipboard-dynamic">' +
             totalCount +
             '<span class="visually-hidden">' +
             this.$element.data("total-count-label") +
