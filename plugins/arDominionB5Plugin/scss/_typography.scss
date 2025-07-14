@@ -1,10 +1,10 @@
-@import "@fontsource/open-sans/scss/mixins";
+//@import "@fontsource/open-sans/scss/mixins";
 
 // Add font-face declarations for all Open Sans weights and styles
-@include faces($subsets: all, $weights: all, $styles: all);
+//@include faces($subsets: all, $weights: all, $styles: all);
 
 :root {
-  --bs-font-sans-serif: "Open Sans", sans-serif;
+  --bs-font-sans-serif: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
 blockquote {

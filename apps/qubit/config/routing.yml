@@ -9,6 +9,10 @@ homepage:
     action: home
     slug: home
 
+chatbot:
+  url:   /chatbot
+  param: { module: chatbot, action: index }
+
 # --------------------------------------------------------- <QubitMetadataRoute>
 # QubitMetadataRoute objects will generate and match URL to integrate the
 # multiple metadata standards available.

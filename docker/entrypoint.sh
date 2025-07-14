@@ -21,7 +21,7 @@ fi
 
 case $1 in
     '')
-        echo "Usage: (convenience shortcuts)"
+        echo "Usage: (convenience shortcuts)"D
         echo "  ./entrypoint.sh worker      Execute worker."
         echo "  ./entrypoint.sh fpm         Execute php-fpm."
         echo ""

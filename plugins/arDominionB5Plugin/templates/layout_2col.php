@@ -1,6 +1,14 @@
 <?php echo get_partial('layout_start'); ?>
 
-<div id="wrapper" class="container-xxl pt-3 flex-grow-1">
+<div id="wrapper" class="container-xxl pt-3 flex-grow-1"><style>
+  h1 {
+    color: var(--bs-secondary) !important;
+  }
+  .multiline-header i {
+      color: var(--bs-secondary) !important;
+
+    }
+</style>
   <?php echo get_partial('alerts'); ?>
   <div class="row">
     <div id="sidebar" class="col-md-3">
@@ -8,6 +16,7 @@
     </div>
     <div id="main-column" role="main" class="col-md-9">
       <?php include_slot('title'); ?>
+    
       <?php include_slot('before-content'); ?>
       <?php if (!include_slot('content')) { ?>
         <div id="content">

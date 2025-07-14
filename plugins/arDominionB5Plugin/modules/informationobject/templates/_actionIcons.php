@@ -67,14 +67,14 @@
     <ul class="list-unstyled">
       <li>
         <a class="atom-icon-link" href="<?php echo url_for([$resource, 'module' => 'object', 'action' => 'importSelect', 'type' => 'xml']); ?>">
-          <i class="fas fa-fw fa-download me-1" aria-hidden="true">
+          <i class="fas fa-fw fa-download icon-dynamic me-1" aria-hidden="true">
           </i><?php echo __('XML'); ?>
         </a>
       </li>
 
       <li>
         <a class="atom-icon-link" href="<?php echo url_for([$resource, 'module' => 'object', 'action' => 'importSelect', 'type' => 'csv']); ?>">
-          <i class="fas fa-fw fa-download me-1" aria-hidden="true">
+          <i class="fas fa-fw fa-download icon-dynamic me-1" aria-hidden="true">
           </i><?php echo __('CSV'); ?>
         </a>
       </li>

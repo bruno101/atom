@@ -13,6 +13,15 @@
   }
 }
 
+.atom-btn-secondary i {
+  color: $primary;
+
+  .atom-btn-secondary:hover &,
+  .atom-btn-secondary:focus & {
+    color: $secondary;
+  }
+}
+
 .atom-btn-white {
   @include button-variant($white, $border-color);
   $color: $gray-900;
@@ -124,5 +133,30 @@ a {
   &.h4,
   &.h5 {
     color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+  }
+}
+
+.icon-dynamic {
+  color: $secondary; 
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $primary;
+  }
+}
+
+.clipboard-dynamic {
+  color: $white;
+  background-color: $secondary;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  display: inline-block;
+
+  &:hover,
+  &:focus {
+    background-color: $primary;
+    color: $white; // garante que o texto continue branco
+    text-decoration: none; // se estiver dentro de <a>, remove sublinhado
   }
 }

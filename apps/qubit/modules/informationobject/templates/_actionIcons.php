@@ -65,13 +65,13 @@
       <li class="separator"><h4><?php echo __('Import'); ?></h4></li>
       <li>
         <a href="<?php echo url_for([$resource, 'module' => 'object', 'action' => 'importSelect', 'type' => 'xml']); ?>">
-          <i class="fa fa-download"></i>
+          <i class="fa fa-download icon-dynamic"></i>
           <?php echo __('XML'); ?>
         </a>
       </li>
       <li>
         <a href="<?php echo url_for([$resource, 'module' => 'object', 'action' => 'importSelect', 'type' => 'csv']); ?>">
-          <i class="fa fa-download"></i>
+          <i class="fa fa-download icon-dynamic"></i>
           <?php echo __('CSV'); ?>
         </a>
       </li>
