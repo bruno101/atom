@@ -73,6 +73,14 @@ if (!file_exists(_ATOM_DIR.'/apps/qubit/config/settings.yml')) {
 copy(_ATOM_DIR.'/config/propel.ini.tmpl', _ATOM_DIR.'/config/propel.ini');
 
 //
+// /config/appChallenge.yml
+//
+
+if (!file_exists(_ATOM_DIR.'/config/appChallenge.yml')) {
+    copy(_ATOM_DIR.'/config/appChallenge.yml.tmpl', _ATOM_DIR.'/config/appChallenge.yml');
+}
+
+//
 // /apps/qubit/config/gearman.yml
 //
 
@@ -114,6 +122,7 @@ all:
       script-src 'self' https://*.googletagmanager.com 'nonce' https://*.googleapis.com https://*.gstatic.com *.google.com https://*.ggpht.com *.googleusercontent.com blob:;
       style-src 'unsafe-inline' https://fonts.googleapis.com;
       worker-src 'self' blob:;
+
       connect-src  'self' http://localhost:7860 https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.googleapis.com *.google.com https://*.gstatic.com  data: blob:;
       frame-ancestors *;
   user_challenge:
