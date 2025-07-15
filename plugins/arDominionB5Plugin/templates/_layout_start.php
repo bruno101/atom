@@ -9,7 +9,7 @@
   <?php include_title(); ?>
   <?php echo get_component('default', 'tagManager', ['code' => 'script']); ?>
   <link rel="shortcut icon" href="<?php echo public_path('favicon.ico'); ?>">
-  <script defer src="/dist/js/vendor.bundle.51cf3c3989802bda6211.js"></script><script defer src="/dist/js/arDominionB5Plugin.bundle.992d56c5f49ad369aa03.js"></script><link href="/dist/css/arDominionB5Plugin.bundle.7beb0af54288e301f733.css" rel="stylesheet">
+  <script defer src="/dist/js/vendor.bundle.a7e9cc721ddffea3467d.js"></script><script defer src="/dist/js/arDominionB5Plugin.bundle.a7d2c17857613b862655.js"></script><link href="/dist/css/arDominionB5Plugin.bundle.9d2db815d12877d4ef13.css" rel="stylesheet">
     <?php echo get_component_slot('css'); ?>
 </head>
 
