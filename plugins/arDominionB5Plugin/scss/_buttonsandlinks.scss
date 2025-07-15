@@ -160,3 +160,26 @@ a {
     text-decoration: none; // se estiver dentro de <a>, remove sublinhado
   }
 }
+
+.toggler {
+  background-color: $white;
+  border-color: $primary;
+  color: $primary;
+
+  &:hover,
+  &:focus {
+    background-color: $primary;
+    color: $white;
+
+    i {
+      color: $white;
+    }
+    
+  }
+
+  &:focus,
+  &:focus:active {
+    box-shadow: $btn-focus-box-shadow;
+  }
+
+}

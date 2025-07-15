@@ -17,4 +17,13 @@
   class="d-flex flex-column min-vh-100 <?php echo $sf_context->getModuleName(); ?> <?php echo $sf_context->getActionName(); ?><?php echo sfConfig::get('app_show_tooltips') ? ' show-edit-tooltips' : ''; ?>">
   <?php echo get_component('default', 'tagManager', ['code' => 'noscript']); ?>
   <?php echo get_partial('header'); ?>
+  <?php
+  $requestUri = $_SERVER['REQUEST_URI'];
+  if (
+    !preg_match('#(^|/)chatbot($|[/?])#', subject: $requestUri)
+  ) {
+    echo get_partial('banner');
+    echo get_component('search', 'box');
+  }
+  ?>
   <?php include_slot('pre'); ?>
