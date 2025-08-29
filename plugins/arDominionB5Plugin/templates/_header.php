@@ -21,7 +21,7 @@
     <a class="navbar-brand position-absolute top-0 start-50 translate-middle-x d-flex flex-wrap flex-xl-nowrap align-items-center py-0 mt-2"
       href="<?php echo url_for('@homepage'); ?>" title="<?php echo __('Home'); ?>" rel="home" style="z-index: 1050;">
       <?php if (sfConfig::get('app_toggleLogo')) { ?>
-        <?php echo image_tag('/plugins/arDominionB5Plugin/images/logo4', ['alt' => __('AtoM logo'), 'class' => 'd-inline-block my-2 me-3', 'height' => '35']); ?>
+        <?php echo image_tag('/plugins/arDominionB5Plugin/images/logo-atom', ['alt' => __('AtoM logo'), 'class' => 'd-inline-block my-1 me-3', 'height' => '45']); ?>
       <?php } ?>
       <?php if (sfConfig::get('app_toggleTitle') && !empty(sfConfig::get('app_siteTitle'))) { ?>
         <span class="text-wrap my-1 me-3"><?php echo esc_specialchars(sfConfig::get('app_siteTitle')); ?></span>
